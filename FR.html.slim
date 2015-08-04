@@ -1,0 +1,85 @@
+== Slim::Template.new('gvar_fr.slim').render
+doctype transitional
+html xmlns="http://www.w3.org/1999/xhtml" 
+  head
+    meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+    title == $title 
+    css:
+      img{display: block;}
+  body style="margin: 0; backround-color: #FFFFFF; " link="#333333" vlink="#666666"
+    table width="700" align="center" border="0" cellpadding="0" cellspacing="0"
+      tr
+        td align="center" style="margin: 0; padding-top: 5px;" 
+          font style="margin: 0; padding: 0; font-family: Verdana, Geneva, sans-serif; font-size:12px; color:#333333; "
+            ==$head_txt1
+            br
+            span style="font-family: Verdana, Geneva, sans-serif; font-size: 10px; color: #333333; margin: 0;" 
+              ==$head_txt2[0]
+              a href="http://tempsl.com/Newsletters/miroir/Relance_0815/FR/index.htm" target="_blank" 
+                strong ==$head_txt2[1]
+      tr
+        td
+          table align="center" border="0" cellpadding="0" cellspacing="0" style="text-align: center; margin: 0 auto; " width="680" 
+            tr
+              td height="124" width="680" 
+                table border="0" cellpadding="0" cellspacing="0" 
+                  tr
+                    td
+                      a href==($logo) style="border: none; outline: none; " target="_blank" 
+                        img alt="TEMPS L" border="0" height="146" src="images/insert_logo.png" style="font-family: Georgia, Times, serif; font-size: 40px; text-align: left; color:#B31E1E; text-transform: uppercase; " width="272"
+                    td
+                      a href==($cata_interactif) style="border: none; outline: none; " target="_blank" 
+                        img alt==($cata_alt) border="0" height="146" src="images/insert_cat.png" style="font-family: Georgia, Times, serif; font-size: 18px; text-align: right; color: #B21F1F; line-height: 64px;" width="408"
+            tr
+              td height==$gift[:img1h] width="680" 
+                a href==($kdo) style="border: none; outline: none; " target="_blank" 
+                  img alt==($kdo1_alt) border="0" height==$gift[:img1h] src="images/insert_gift1.jpg" style="font-family: Georgia, Times, serif; font-size: 21px; text-align: center; color: #024CA0; " width="680"
+            tr
+              td height==$gift[:img2h] width="680" 
+                a href==($kdo) style="border: none; outline: none; " target="_blank" 
+                  img alt==($kdo2_alt) border="0" height==$gift[:img2h] src="images/insert_gift2.jpg" style="font-family: Georgia, Times, serif; font-size: 21px; text-align: center; color: #024CA0; " width="680"
+            tr
+              td align="left" height="8" style="padding-left:10px; " width="680" 
+            /! banner 
+            tr
+              td style="padding-bottom:5px;"
+                a href=="http://www.tempsl.fr/fr/animation/presentation-cadeaux.aspx?utm_source=NL&utm_medium=email&utm_content=bann&utm_campaign=0815_relance" target="_blank"
+                  img src="images/insertBanner.png" alt="NOTIFICATION DE GAIN : GRANDE GAGNANTE DE L’ÉTÉ, 1 CHEQUE jusqu’à 3000€ ou 1 COLIS DE VALEUR jusqu’à 300€***" width="680" height="90" border="0"
+          table border="0" cellpadding="0" cellspacing="0" width="700" 
+            tr
+              td colspan="2" height="43" width="700" 
+                img alt==($cmd[0]) border="0" height="43" src="images/foo_01.png" style="font-family: sans-serif; color: #003691; " width="700"
+            tr
+              td colspan="2" height="25" width="700" 
+                table border="0" cellpadding="0" cellspacing="0" width="700" 
+                  tr
+                    td
+                      img alt==($cmd[1]) border="0" height="25" src="images/foo_02.png" style="font-family: sans-serif; text-transform: uppercase; color: #003691; " width="512"
+                    td align="center" height="25" style="vertical-align: middle; " valign="middle" width="71" 
+                      font style="font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: bold; color: #333333; text-transform: uppercase; " ==($code)
+                    td
+                      img alt="" border="0" height="25" src="images/foo_04.png" width="117"
+            tr
+              td height="112" width="350" 
+                a href==($internet) style="border: none; outline: none; " target="_blank" 
+                  img alt==($internet_alt) border="0" height="112" src="images/foo_05.png" style="font-family: sans-serif; color:#222222; " width="350"
+              td height="112" width="350" 
+                img alt==($phone_alt) border="0" height="112" src="images/foo_06.png" style="font-family: sans-serif; color: #222222; " width="350"
+            tr
+              td colspan="2" height="56" width="700" 
+                table border="0" cellpadding="0" cellspacing="0" width="700" 
+                  tr
+                    td
+                      a href==($garan) style="border: none; outline: none; " target="_blank" 
+                        img alt==($garan_alt) border="0" height="56" src="images/foo_07.png" width="178"
+                    td
+                      a href==($livr) style="border: none; outline: none; " target="_blank" 
+                        img alt==($livr_alt) border="0" height="56" src="images/foo_08.png" width="172"
+                    td
+                      a href==($paie) style="border: none; outline:none; " target="_blank" 
+                        img alt==($paie_alt) border="0" height="56" src="images/foo_09.png" width="172"
+                    td
+                      a href==($garan) style="border: none; outline: none; " target="_blank" 
+                        img alt==($garan2_alt) border="0" height="56" src="images/foo_10.png" width="178"
+      / _legal
+      == Slim::Template.new('_legal.slim').render
